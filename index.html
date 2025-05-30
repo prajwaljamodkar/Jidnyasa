@@ -1,213 +1,236 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="icon" type="image/png" href="./src/logo/logo.png">
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
-    />
-    <link rel="stylesheet" href="./css/style.css">
-
-    <title>Jinyasa</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700">
+    <title>Jinyasa Concept School</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121517]">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <h2 class="text-[#121517] text-lg font-bold leading-tight tracking-[-0.015em]">Jinyasa Concept School</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">Home</a>
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">About Us</a>
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">Classes</a>
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">Admissions</a>
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">Gallery</a>
-              <a class="text-[#121517] text-sm font-medium leading-normal" href="#">Contact</a>
-            </div>
-            
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div class="video-container">
-                  <video class="video"  loop autoplay muted>
-                    <source src="./src/video.mp4" type="video/mp4">
-                    <source src="video.ogg" type="video/ogg">
-                 </video>
-                 <div class="transperent">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="site-container">
+        <div class="layout-container">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><img src="./src/logo/logo.png"></div>
+                        Jinyasa Concept School
+                    </a>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#classes" class="nav-link">Classes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#gallery" class="nav-link">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#admissions" class="nav-link">Admissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
 
-                 </div>
-                  <!-- Text Div Overlay -->
-                  <div class="overlay-text">
-                    <h1>Welcome to Jinyasa</h1>
-                 </div>
-                 <div class="overlay-text1">
-                    <p>Concept School</p>
-                 </div>
+            <main class="main-content">
+                <div class="content-container">
+                    <!-- Hero Section -->
+                    <section id="home" class="hero-section">
+                        <div class="video-container">
+                            <video class="hero-video" loop autoplay muted>
+                                <source src="./src/video.mp4" type="video/mp4">
+                                <source src="video.ogg" type="video/ogg">
+                            </video>
+                            <div class="video-overlay"></div>
+                            <div class="hero-text">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Welcome to Jinyasa</h1>
+                                <p class="hero-subtitle">Concept School</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- About Section -->
+                    <section id="about" class="about-section">
+                        <h2 class="section-title">About Jinyasa</h2>
+                        <p class="section-text">
+                            Jinyasa Concept School is committed to creating a joyful and stimulating learning environment for young children. Our dedicated teachers and colorful classrooms help children develop a love for learning and exploration.
+                        </p>
+                    </section>
+
+                    <!-- Classes Section -->
+                    <section id="classes" class="classes-section">
+                        <h2 class="section-title">Classes</h2>
+                        <div class="cards-container">
+                            <div class="card-wrapper">
+                                <div class="card">
+                                    <div class="card-image nursery-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">NURSERY</p>
+                                        <p class="card-description">Join us for a day of games and laughter! Our nursery program focuses on play-based learning and social development.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image kg1-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">KG I</p>
+                                        <p class="card-description">Explore exciting experiments with our young scientists. Building foundational skills through hands-on activities.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image kg2-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">KG II</p>
+                                        <p class="card-description">Enjoy a show of songs and dances. Preparing for primary school with advanced learning activities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Learning Philosophy Section -->
+                    <section class="philosophy-section">
+                        <h2 class="section-title">Learning Philosophy</h2>
+                        <div class="cards-container">
+                            <div class="card-wrapper">
+                                <div class="card">
+                                    <div class="card-image problem-solving-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">Problem Solving</p>
+                                        <p class="card-description">Developing critical thinking skills through engaging challenges and interactive problem-solving activities.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image yoga-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">Yoga & Wellness</p>
+                                        <p class="card-description">Promoting physical and mental well-being through yoga, mindfulness, and healthy lifestyle practices.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image critical-thinking-bg"></div>
+                                    <div class="card-content">
+                                        <p class="card-title">Critical Thinking</p>
+                                        <p class="card-description">Encouraging analytical thinking and creativity through STEM activities and hands-on experiments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Admissions Section -->
+                    <section id="admissions" class="admissions-section">
+                        <h2 class="section-title">Admissions</h2>
+                        <p class="section-text">
+                            We welcome new students to join our vibrant community. Contact us to learn more about our admissions process and how to enroll your child in our nurturing environment.
+                        </p>
+                    </section>
+
+                    <!-- Gallery Section -->
+                    <section id="gallery" class="gallery-section">
+                        <h2 class="section-title">Gallery</h2>
+                        <div class="gallery-grid">
+                            <div class="gallery-item gallery-item-1"></div>
+                            <div class="gallery-item gallery-item-2"></div>
+                            <div class="gallery-item gallery-item-3"></div>
+                            <div class="gallery-item gallery-item-4"></div>
+                            <div class="gallery-item gallery-item-5"></div>
+                            <div class="gallery-item gallery-item-6"></div>
+                        </div>
+                    </section>
+
+                    <!-- Contact Section -->
+                    <section id="contact" class="contact-section">
+                        <h2 class="section-title">Contact</h2>
+                        <p class="section-text">Get in touch with us to schedule a visit or ask any questions. We're here to help!</p>
+                        
+                        <div class="cta-section">
+                            <div class="cta-content">
+                                <h1 class="cta-title">Ready to Join the Fun?</h1>
+                                <div class="cta-button-wrapper">
+                                    <button class="cta-button">
+                                        <span>Enroll Now</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-              </div>
-            </div>
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About Jinyasa</h2>
-            <p class="text-[#121517] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Jinyasa Concept School is committed to creating a joyful and stimulating learning environment for young children. Our dedicated teachers and colorful classrooms help
-              children develop a love for learning and exploration.
-            </p>
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Classes</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwpP2OKPz7OOhT_zsRSKXJPwCo2U7pOPAqhKqVvMj5M1o_rdKAAIGup79_24H58epTTWpfObIA2H8LzvoEVBS7z79iRcNQ1V-Qh8Zhw5yg1a0x7I_vxZLHRnWwrfa8EmydgQ5WmAzHExBiyJo1SbtLc-_2gnusyzgD5VFKWeE-gGinGE8KtanpN_m0_g3-b7g7zLEaaGGsXVLiMw07adS_x0OIzhiVxEDagaOxHyJ_e3Z99-WFFtgpGDJedr8Sk8vz1liGRwbWYDeJ");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">NURSERY</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Join us for a day of games and laughter!</p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnwO13bI2y2yBGpGRNmh0o9U2G3ZsBOZrWGX3H-MierQbu60M0geLCpDj9fvuBjXlkjI0tQ-2-iABEjwwAoZTc_K_koMcligVAR3M7JJGYtAXKcn5pAnuua1nJLL-X4HPp5qYwxxVGq2Iqjh--N8QPkDRteb2jEauLrBSGpAgM-vqpqoH1AGRkD6oDFimAX38v2WxxcjceTaKGK_9wCnmouopDpk2vJjKOFXvM0NXLC7tE_qeK2q3O_w_DCmOuXzIvorxGiKXlicEe");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">KGI</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Explore exciting experiments with our young scientists.</p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdpEFSV5963Gab3hAmn0P_0ehCEPex6TBJWOO1hkvXZygruCEL8GXm_njt8-YbYAuAj9zXf0FuIyL3WAhFkjRKJ0OEmGS35kCnlVD_Nh16zI6EshtilYCIjzMkeyncjT40vBOa_yW0B2H5r_bzqbE7UFPDbHjd5VeNpU9tvApFR3nhwgE2GUgNBkm6QvE-720E4fBdeD0gpkUrsLhegB2PhCLsprrhoo7sOgYwELxvjr4d8g9TIv2Z4CrYy0qWHoaLsk1iT26s1HLQ");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">KGII</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Enjoy a show of songs and dances.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Learning Phylosophy</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style="background-image: url(./src/Classes/number.jpg);"
-                    > </div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">Problem Solving</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Join us for a day of games and laughter!</p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style="background-image: url(./src/Learning/yoga.jpg);"
-                    > </div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">Yoga Day</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Join us for a day of games and laughter!</p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("./src/Learning/waterfloat.jpg");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121517] text-base font-medium leading-normal">Critical Thinking</p>
-                    <p class="text-[#677b83] text-sm font-normal leading-normal">Enjoy a show of songs and dances.</p>
-                  </div>
-                </div>
-              </div>
-            </div>            
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Admissions</h2>
-            <p class="text-[#121517] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              We welcome new students to join our vibrant community. Contact us to learn more about our admissions process and how to enroll your child.
-            </p>
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Gallery</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDi6um7gsn9-kjFMx0FspUA2knKWsm9m7FqCO74N9nWVvQQpUtXszkVcngpchAhvs1mTm6_7CPOablyopg9wY3wRVEc8uBmtsD3ThAmCexHdaiuG8RNfEh5LMKudhjyqIc45Tan9Q_NpliSt44dH-8fDadAyhs0cfus6y73rQpgncOGg4SjHKqtorSa1yMK32x3aOaHJhvDwVCuV60co4lKvOZAm1ODnVH9OzxwwcZ55DWuFQy1pDXCwodQcgRzctM_VMTMm_vJHwGq");'
-                ></div>
-              </div>
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJgp5TbnhYg-DBbd8xRUeHdyur3YDC1V1XoqVlsWF0uVxFXoIiC5t6Ad1V0-Rc7k8HSnSz7CaAbVHuiCOQUoKq4BDApBQLWUzIxTKcNoYe-0ZpKlCh_dJulQmLj1qPAOQE2OREpM0t2lDcdR-LFcyo-M2O4nnZ1wz4HlImt7bfTORGjef4C-_AF4uA-DJS2CdbVFUpV9a8BVJm0EaXleIURdW7woJwSzW9WHYp3UTb7SkP8McWFdtVl_tGT-CiArmwGroXJAEJvrCz");'
-                ></div>
-              </div>
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA26Bcspto5rHcVXhepyo1PqDoJMMOhkQSCNPuXPoxAScCENBrnc5kLODnNtxF9M6_Rfib4u-2m3kh1_eOsBgT4iZ35bBvZZiOHZQ1n0DfFd_auhecUcIz3HPsIirSM8F0Cu11Wia6mc07XBDvoOYNClU-Wral6wAp7fyRrDABk51uZTylJKRNFu-QNigmyiUFo6t84LR1OC8BSCeHa9RLN1wpz239p1RdiAnELvRWUKQuH1pCCwGI1EmzXgYexItsEUf9x6E0RCHZU");'
-                ></div>
-              </div>
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIGex0qED9BoDamyanRcA-nxmiLDGATg7qxgvjsIqncPTug_pZXLglpcFhiN6ZJWcESBzWxwyryBg6Hw0Fv2c6pJ_2SGcbzBz4zU41AncTHy4htcw0fEOTzB6F66HMJwxEyUDHb16YvYbm7MBgPBQdMm-QZQqmhpnamyOy7I2EUyGNQ4zuHGhCDVZdM0dIETlYcrL5bE0Xuzt5zLOZcT54sweOveaMLyoq525EewdQG6SAeL5pLB_yE16ev8uRANYk4vb3Adcd8kJm");'
-                ></div>
-              </div>
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHUvPV8s6QdA7P8vS3L8ZgT44EfENP7BneMImvSgBb_GfYHhjWT0gQ1qc_BiwJjdvuabXpY5pNNvSb1NJOnNY3zUg9sbzAaxvTMFYVgqnPDfoQAYJ8yS-fMxS41KVgTeXX693f67kV1OaxfG51kiRsyoXvA8sBahrY5fpt3MLVf3QbI9V2iV_6a9y4ktQsJ0iTioXt0ui6OwEJaP5Wy6WBi5dDiXsZV--p7gh_OIiDq4YD9Rhws_ojbBputzn5I9ktKBZmEJNNVOuo");'
-                ></div>
-              </div>
-              <div class="flex flex-col gap-3">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDInECAmKUuy1Dj-4r8kK9GCk83jvvDkj5qwkUhJdrcFaSX2DkOB69ioJoVNfJpQQWtin2tByJcNFs0u_v-D0hgFMqrJmkmB5k8QqJEmDaZ1KCcpq-nVxPx_XfOUA1XXzrUcIWDK1W6rLSKmG92NFaFe4R9MxPcCP4rmn4GVC6qpWCglS9ksbONWKXHcwSTTQWQH_ot2QEOLj-a9DuXVovR0DQdu2-fqyWwYuRnwp1NnOtvUse4E1lgOSyknz0UQwADLXqjtCo08SGR");'
-                ></div>
-              </div>
-            </div>
-            <h2 class="text-[#121517] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contact</h2>
-            <p class="text-[#121517] text-base font-normal leading-normal pb-3 pt-1 px-4">Get in touch with us to schedule a visit or ask any questions. We're here to help!</p>
-            <div class="@container">
-              <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex flex-col gap-2 text-center">
-                  <h1
-                    class="text-[#121517] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                  >
-                    Ready to Join the Fun?
-                  </h1>
-                </div>
-                <div class="flex flex-1 justify-center">
-                  <div class="flex justify-center">
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#add9ea] text-[#121517] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                    >
-                      <span class="truncate">Enroll Now</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </main>
         </div>
-      </div>
     </div>
-  </body>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section[id]');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
 </html>

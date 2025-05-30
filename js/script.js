@@ -53,28 +53,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-  const words = "This is a smooth text reveal on scroll".split(" ");
-    const container = document.getElementById("text");
-
-    words.forEach((word, index) => {
-      const wrapper = document.createElement("span");
-      wrapper.className = "word";
-      wrapper.innerHTML = `
-        ${word}
-        <span>${word}</span>
-      `;
-      container.appendChild(wrapper);
-    });
-
-    window.addEventListener("scroll", () => {
-      const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      const wordSpans = document.querySelectorAll(".word span");
-
-      wordSpans.forEach((span, index) => {
-        const start = index / wordSpans.length;
-        const end = start + 1 / wordSpans.length;
-        const visible = progress >= start && progress <= end;
-
-        span.style.opacity = visible ? "1" : "0";
-      });
-    });

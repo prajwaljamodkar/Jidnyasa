@@ -21,7 +21,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #00000080;
+            background-color: #f5f5f5ab;
             z-index: 9999;
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
@@ -480,7 +480,7 @@
 
         /* Main Content */
         .main-content {
-            padding: 90px 160px 0;
+            padding: 90px 160px ;
             display: flex;
             flex: 1;
             justify-content: center;
@@ -517,7 +517,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.551);
 }
 
 .hero-text {

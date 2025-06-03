@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight">Gallery</p>
+                <p class="text-[#49739c] text-sm font-normal leading-normal">
+                  Explore the vibrant life at Evergreen High through our photo gallery. Relive the excitement of our events and the everyday moments that make our school special.
+                </p>
+              </div>
+            </div>
+            <div class="pb-3">
+              <div class="flex border-b border-[#cedbe8] px-4 gap-8">
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#0c7ff2] text-[#0d141c] pb-[13px] pt-4" href="#">
+                  <p class="text-[#0d141c] text-sm font-bold leading-normal tracking-[0.015em]">Annual Day</p>
+                </a>
+                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#49739c] pb-[13px] pt-4" href="#">
+                  <p class="text-[#49739c] text-sm font-bold leading-normal tracking-[0.015em]">Independence Day</p>
+                </a>
+              </div>
+            </div>
+            <hr>
+            <div class="flex flex-col items-center justify-center h-full">
+              <div class="gear animate-spin">⚙️</div>
+              <p class="message">this page is under maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <style>
+        .p{align-items: center;}
+        text {
+          font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+        }
+
+    .gear {
+      font-size: 80px;
+      color: #555;
+      animation: spin 2s linear infinite;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .message {
+      font-size: 24px;
+      font-weight: bold;
+      
+    }
+  </style>
+  </body>
+</html>

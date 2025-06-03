@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: "Spline Sans", "Noto Sans", sans-serif;
-            background-color: rgb(255, 255, 255);
+            background-color:#ffffff;
         }
             /* Loader container */
         .loader-container {
@@ -47,76 +47,6 @@
         @keyframes pulse {
             0%, 100% { opacity: 0.7; }
             50% { opacity: 1; }
-        }
-
-        /* Main content */
-        .site-container {
-            display: none;
-            min-height: 100vh;
-            background-color: #ffffff;
-        }
-
-        .site-container.show {
-            display: block;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .welcome-section {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .welcome-section h1 {
-            color: #333;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .welcome-section p {
-            color: #666;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
         /* From Uiverse.io by gustavofusco - Pencil Loader Styles */
@@ -309,7 +239,7 @@
 
         /* Navbar Styles */
         .navbar {
-            background-color: #ffffff;
+            background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
             padding: 0;
             position: fixed;
             top: 0;
@@ -375,12 +305,12 @@
         }
 
         .nav-link:hover {
-            background: rgba(0, 0, 0, 0.200);
+            background: #a8d5ba;
             transform: translateY(-2px);
         }
 
         .nav-link.active {
-            background: rgba(0, 0, 0, 0.200);
+            background: #a8d5ba;
         }
 
         /* Hover underline effect */
@@ -391,7 +321,7 @@
             left: 50%;
             width: 0;
             height: 3px;
-            background: #0000004f;
+            background: #a8d5ba;
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
@@ -429,7 +359,7 @@
                 top: 70px;
                 left: 200px;
                 width: 50%;
-                background-color: #ffffff;
+                background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
                 flex-direction: column;
                 transform: translateY(-100%);
                 opacity: 0;
@@ -443,7 +373,7 @@
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
-                background-color: #ffffff;
+                background-color: #FFF3B0;
                 border-radius: 15px;
             }
 
@@ -454,7 +384,7 @@
 
             .nav-link {
                 padding: 15px 20px;
-                border-bottom: 1px solid rgb(255, 255, 255);
+                
                 border-radius: 15px;
             }
 
@@ -463,7 +393,7 @@
             }
 
             .nav-link:hover {
-                background: rgba(0, 0, 0, 0.200);
+                background: #a8d5ba;
                 transform: translateY(-2px);
             }
 
@@ -487,6 +417,11 @@
             display: flex;
             flex: 1;
             justify-content: center;
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;       
         }
 
         .content-container {
@@ -494,6 +429,7 @@
             flex-direction: column;
             max-width: 960px;
             flex: 1;
+            background-color: #00000000;
         }
 
         /* Hero Section */
@@ -592,7 +528,7 @@
             gap: 16px;
             border-radius: 12px;
             min-width: 280px;
-            background: white;
+            background: #FFF3B0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -616,7 +552,7 @@
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            background: #0000002b;
+           
             transition: all 0.3s ease;
         }
 
@@ -724,6 +660,59 @@
 
         .gallery-item-6 {
             background-image: url(../src/Gallery/IMG_20240815_081840.jpg);
+        }
+
+        .gallery-button-container {
+            position: right;
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+        }
+
+        .gallery-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            margin-top: -6px;        
+            background-color: #00000000;
+            color: rgb(0, 0, 0);
+            
+            transition: all 0.3s ease;
+        }
+
+        .gallery-button:hover {
+            transform: translateY(-2px);
+            background-color: #00000000;
+        }
+
+        .hover-underline-animation-gallery {
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .hover-underline-animation-gallery::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            transition: width 0.3s ease;
+        }
+
+        .gallery-button:hover .hover-underline-animation-gallery::after {
+            width: 100%;
+        }
+
+        #arrow-horizontal {
+            transition: transform 0.3s ease;
+            fill: rgb(0, 0, 0);
+        }
+
+        .gallery-button:hover #arrow-horizontal {
+            transform: translateX(5px);
         }
 
         /* CTA Section */
@@ -848,8 +837,8 @@
 
     .footer {
   margin-top: auto;
-  background-color: #32485d; /* dark blue/black */
-  color: #aebacf;
+  background-color: rgba(0, 0, 0, 0.204);
+  color: #000000;
   text-align: center;
   padding: 20px;
 }
@@ -857,7 +846,7 @@
 .footer-links a,
 .footer-social a {
   margin: 0 15px;
-  color: #aebacf;
+  color: #000000;
   text-decoration: none;
 }
 

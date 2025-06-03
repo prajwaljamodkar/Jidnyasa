@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     // Show loader for at least 3 seconds (one full pencil animation cycle)
     setTimeout(function() {
         hideLoader();
-    }, 5000);
+    }, 1000);
 });
 
 function hideLoader() {
@@ -12,7 +12,7 @@ function hideLoader() {
     // Add fade-out class to loader
     loader.classList.add('fade-out');
     
-    // After transition completes, hide loader and show main content
+    // After transition completes, hide loader and show main content 
     setTimeout(function() {
         loader.style.display = 'none';
         mainContent.classList.add('show');

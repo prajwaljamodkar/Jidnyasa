@@ -200,6 +200,28 @@
                             <div class="gallery-item gallery-item-6"></div>
                         </div>
                     </section>
+                    <!-- From Uiverse.io by alexmaracinaru --> 
+                       <div class="gallery-button-container">
+                            <button class="gallery-button" action="./pages/gallery.html">
+                                <span class="hover-underline-animation-gallery">Visit Gallery</span>
+                                <svg
+                                    id="arrow-horizontal"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="30"
+                                    height="10"
+                                    viewBox="0 0 46 16"
+                                >
+                                    <path
+                                        id="Path_10"
+                                        data-name="Path 10"
+                                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                        transform="translate(30)"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <br>
+                
                     <hr id="section-divider-contact">
 
                     <!-- Contact Section -->
@@ -207,16 +229,119 @@
                         <h2 class="section-title">Contact</h2>
                         <p class="section-text">Get in touch with us to schedule a visit or ask any questions. We're here to help!</p>
                         
-                        <div class="cta-section">
-                            <div class="cta-content">
-                                <h1 class="cta-title">Ready to Join the Fun?</h1>
-                                <div class="cta-button-wrapper">
-                                    <button class="cta-button">
-                                        <span>Enroll Now</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- From Uiverse.io by andrew-demchenk0 --> 
+<form class="form" action="./pages/gallery.html" method="POST">
+  <div class="title">Contact Us<br></div>
+  <input type="FirstName" placeholder="FirstName" name="FirstName" class="input">
+  <input type="LastName" placeholder="LastName" name="LastName" class="input">
+  <input type="Mobile" placeholder="Mobile" name="Mobile" class="input">
+  <input type="email" placeholder="Email" name="email" class="input">
+    <textarea name="textarea" id="textarea" class="input" placeholder="Massege" rows="10" cols="50"></textarea>
+  <button class="button-confirm">SUBMIT →</button>
+</form>
+<style>
+    /* From Uiverse.io by andrew-demchenk0 */ 
+.form {
+  --input-focus: #000000;
+  --font-color: #000000;
+  --font-color-sub: rgb(0, 0, 0)000;
+  --bg-color: #fff;
+  --main-color: #000000;
+  padding: 20px;;
+  margin-bottom: 50px;
+  background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.title span {
+  color: var(--font-color-sub);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.input {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.login-with {
+  display: flex;
+  gap: 20px;
+}
+
+.button-log {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+
+.button-log:active, .button-confirm:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.button-confirm {
+  margin: 50px auto 0 auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+</style>
                     </section>
                 </div>
             </main>
@@ -236,7 +361,7 @@
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
-  <p>© 2024 University Prep. All rights reserved.</p>
+  <p>© 2025 Jinyasa Concept School. All rights reserved.</p>
 </footer>
 <style>
 /* Add your footer CSS here if needed */

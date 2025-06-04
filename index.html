@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -10,13 +13,19 @@
       as="style"
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700">
-    <title>Jinyasa Concept School</title>
+    <title>Jidnyasa Concept School</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <div class="background-container">
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
+    </div>
         <!-- Loader Screen -->
     <div class="loader-container" id="loader">
+        <div class="background-image"></div>
+        <div class="background-overlay"></div>
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
             <defs>
                 <clipPath id="pencil-eraser">
@@ -57,7 +66,7 @@
                 <div class="nav-container">
                     <a href="#" class="logo">
                         <div class="logo-icon"><img src="./src/logo/logo.png" ></div>
-                        Jinyasa Concept School
+                        Jidnyasa Concept School
                     </a>
                     
                     <ul class="nav-menu" id="nav-menu">
@@ -99,20 +108,28 @@
                                 <source src="video.ogg" type="video/ogg">
                             </video>
                             <div class="video-overlay"></div>
+
                             <div class="hero-text">
-                            <div class="hero-text">
-                                <h1 class="hero-title" draggable="true">Welcome to Jinyasa</h1>
-                                <p class="hero-subtitle" draggable="true">Concept School</p>
+                                <h1 class="hero-title" draggable="true">'Learning Through Curiosity'</h1>
                             </div>
-                        </div>
                     </section>
                     <hr id="section-divider-about">
 
                     <!-- About Section -->
                     <section id="about" class="about-section">
-                        <h2 class="section-title">About Jinyasa</h2>
+                        <h2 class="section-title">About Jidnyasa</h2>
                         <p class="section-text">
-                            Jinyasa Concept School is committed to creating a joyful and stimulating learning environment for young children. Our dedicated teachers and colorful classrooms help children develop a love for learning and exploration.
+                            "Jinyasa Concept School is committed to creating a joyful and stimulating learning environment for young children. We are working in our individual profession and also working together since last 5 years on Educational Projects for students, during this we found many lacunae in the current education system so we come up with the idea of Jidnyasa Concept School."
+                        </p>
+                    </section>
+                    <section  class="about-section">
+                        <h2 class="section-title">Our Vision</h2>
+                        <p class="section-text">
+                            <ul>
+                                <li>To create self employed mind set through education.</li>
+                                <li>To create awareness about social problem and develop patriotism.</li>
+                                <li>To create students physically and mentally strong enough.</li>
+                                <li>To nurture our culture ans promote spiritual development.</li>                            </ul>
                         </p>
                     </section>
                     <hr id="section-divider-classes">
@@ -132,14 +149,14 @@
                                 <div class="card">
                                     <div class="card-image kg1-bg"></div>
                                     <div class="card-content">
-                                        <p class="card-title">KG I</p>
+                                        <p class="card-title">JUNIOR KG (KG-I)</p>
                                         <p class="card-description">Explore exciting experiments with our young scientists. Building foundational skills through hands-on activities.</p>
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-image kg2-bg"></div>
                                     <div class="card-content">
-                                        <p class="card-title">KG II</p>
+                                        <p class="card-title">SENIOR KG (KG II)</p>
                                         <p class="card-description">Enjoy a show of songs and dances. Preparing for primary school with advanced learning activities.</p>
                                     </div>
                                 </div>
@@ -249,13 +266,13 @@
   --main-color: #000000;
   padding: 20px;;
   margin-bottom: 50px;
-  background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
+  background:linear-gradient(90deg, #aee4f5 0%, #c7eacf);;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border-radius: px;
+  border-radius: 15px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
 }
@@ -362,6 +379,7 @@
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
   <p>© 2025 Jinyasa Concept School. All rights reserved.</p>
+  <p>Develop by<a href="https:github.com/prajwaljamodkar"> Prajwal Jamodkar</a></p>
 </footer>
 <style>
 /* Add your footer CSS here if needed */

@@ -11,8 +11,24 @@
             margin: 0;
             padding: 0;
             font-family: "Spline Sans", "Noto Sans", sans-serif;
-            background-color:#ffffff;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url(../src/doodle.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3; /* Adjust opacity as needed */
+        }   
+
             /* Loader container */
         .loader-container {
             position: fixed;
@@ -226,7 +242,7 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.375);
             overflow-x: hidden;
         }
 
@@ -239,7 +255,7 @@
 
         /* Navbar Styles */
         .navbar {
-            background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
+            background:linear-gradient(90deg, #aee4f5 0%, #c7eacf);
             padding: 0;
             position: fixed;
             top: 0;
@@ -305,12 +321,12 @@
         }
 
         .nav-link:hover {
-            background: #a8d5ba;
+            background: #C17D62;
             transform: translateY(-2px);
         }
 
         .nav-link.active {
-            background: #a8d5ba;
+            background: #C17D62;
         }
 
         /* Hover underline effect */
@@ -321,7 +337,7 @@
             left: 50%;
             width: 0;
             height: 3px;
-            background: #a8d5ba;
+            background: #464646;
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
@@ -359,7 +375,7 @@
                 top: 70px;
                 left: 200px;
                 width: 50%;
-                background:linear-gradient(90deg, #d2f18a 0%, #FFF3B0);
+                background:linear-gradient(90deg, #aee4f5 0%, #c7eacf);
                 flex-direction: column;
                 transform: translateY(-100%);
                 opacity: 0;
@@ -373,8 +389,11 @@
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
-                background-color: #FFF3B0;
+                background-color: #C17D62;
                 border-radius: 15px;
+            }
+            .nav-menu:hover {
+                background-color: #C17D62;
             }
 
             .nav-item {
@@ -393,7 +412,7 @@
             }
 
             .nav-link:hover {
-                background: #a8d5ba;
+                background-color: #C17D62;
                 transform: translateY(-2px);
             }
 
@@ -456,7 +475,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.551);
+    background: rgba(0, 0, 0, 0.199);
 }
 
 .hero-text {
@@ -468,20 +487,22 @@
     color: white;
     z-index: 2;
 }
+.hero-text h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-family: 'Spline Sans', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            font-family: "Alumni Sans SC", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
 
-.hero-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0 0 16px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
 
-.hero-subtitle {
-    font-size: 24px;
-    font-weight: 500;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
+
+
         /* Section Styles */
         .section-title {
             color: #121517;
@@ -528,7 +549,7 @@
             gap: 16px;
             border-radius: 12px;
             min-width: 280px;
-            background: #FFF3B0;
+            background:linear-gradient(90deg, #aee4f5 0%, #c7eacf);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }

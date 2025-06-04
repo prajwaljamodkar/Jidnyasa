@@ -1,8 +1,8 @@
 
         /* Base Styles */
         html {
-    scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
-}
+        scroll-padding-top: 100px; /* Adjust this value based on your navbar height */
+        }
         * {
             box-sizing: border-box;
         }
@@ -284,16 +284,16 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #ffffff;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff00;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 10px;
             font-size: 20px;
-            color: white;
+            color: rgba(255, 255, 255, 0);
         }
 
         .nav-menu {
@@ -307,45 +307,37 @@
 
         .nav-item {
             position: relative;
+            flex: 1;
         }
 
         .nav-link {
             color: rgb(0, 0, 0);
             text-decoration: none;
-            padding: 25px 20px;
+            padding: 15px 10px;
             display: block;
             font-weight: 500;
+            gap: 10px;
             transition: all 0.3s ease;
             position: relative;
             border-radius: 15px;
+            border: #f5576c00 4px solid;
         }
 
         .nav-link:hover {
-            background: #C17D62;
+            background: #fcf6bd;
+            border: #e4c1f9 4px solid;
             transform: translateY(-2px);
+            opacity: 1;
+            visibility: visible;
         }
 
         .nav-link.active {
-            background: #C17D62;
+            background: #fcf6bd;
+            border: #e4c1f9 4px solid;
         }
 
         /* Hover underline effect */
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: #464646;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 80%;
-        }
+        
 
         /* Mobile Menu Toggle */
         .hamburger {
@@ -389,11 +381,13 @@
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
-                background-color: #C17D62;
+                
                 border-radius: 15px;
             }
             .nav-menu:hover {
-                background-color: #C17D62;
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;    
             }
 
             .nav-item {
@@ -412,7 +406,7 @@
             }
 
             .nav-link:hover {
-                background-color: #C17D62;
+                background-color: #e0e0e0;
                 transform: translateY(-2px);
             }
 
@@ -456,38 +450,38 @@
             margin-bottom: 40px;
         }
         .video-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 12px;
-}
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
 
-.hero-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.199);
-}
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.199);
+        }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-}
-.hero-text h1 {
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+        .hero-text h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
             font-family: 'Spline Sans', sans-serif;
@@ -522,6 +516,14 @@
             padding: 4px 16px 12px 16px;
             margin: 0;
         }
+        .mission-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 10px 10px;
+            justify-content: center;
+        }
+        
 
         /* Cards Container */
         .cards-container {
@@ -607,6 +609,135 @@
             line-height: 1.5;
             margin: 0;
         }
+        /* Why Jidnyasa */
+        .wj-gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .wj-gallery-item {
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wj-gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .wj-gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .wj-gallery-main{
+            grid-row: span 2;
+        }
+        .wj-gallery-sub{
+            grid-column: span 2;
+        }
+        .wj-gallery-f {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 400px;
+        }
+        .wj-gallery-sub-f1{
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
+        .wj-gallery-main-f{
+            grid-column: span 2 / span 2;
+            grid-row: span 4 / span 4;
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
+        .wj-gallery-sub-f{
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-row-start: 3;
+        }
+        /* Learning Phylosophy Card  */
+        .lp-cards-container {
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .lp-cards-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .lp-card-wrapper {
+            display: flex;
+            align-items: stretch;
+            padding: 16px;
+            gap: 20px;
+        }
+
+        .lp-card {
+            display: flex;
+            height: 100%;
+            flex: 1;
+            flex-direction: column;
+            gap: 16px;
+            border-radius: 12px;
+            min-width: 280px;
+            background:#aee4f5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .lp-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background: #0000004f;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .lp-card:hover {
+            transform: scale(1.05);
+        }
+
+        .lp-card-image {
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            aspect-ratio: 16/9;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .lp-card-content {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+
+        .lp-card-title {
+            color: #121517;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0 0 4px 0;
+        }
 
         /* Background Images for Cards */
         .nursery-bg {
@@ -633,9 +764,63 @@
             background-image: url(../src/Learning/waterfloat.png);
         }
 
+
+
+        /* Admission Styles */
+        .sub-section-title{
+            color: #121517;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            padding: 20px 16px 12px 16px;
+            margin: 0;
+
+        }
+        .apply-now-container {
+            position: right;
+            display: flex;
+            justify-content: center;
+            margin-top: -30px;
+        }
+        .apply-btn {
+            
+            color: rgb(0, 0, 0);
+            border: #e4c1f9 4px solid;
+            border-radius: 15px;
+            padding: 0 16px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+        }
+        .apply-btn::after{
+
+        }
+        .apply-btn:hover {
+            background: #fcf6bd;
+            border: #e4c1f9 4px solid;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;        
+            color: rgb(0, 0, 0);
+            transform: translateY(-2px);
+            opacity: 1;
+            visibility: visible;
+            
+
+        }
+
+
+
+
+
+
         /* Gallery Styles */
         .gallery-section {
-            margin: 40px 0;
+            margin: 0px 0;
         }
 
         .gallery-grid {
@@ -687,7 +872,7 @@
             position: right;
             display: flex;
             justify-content: center;
-            margin-top: -30px;
+            margin-top: 0px;
         }
 
         .gallery-button {
@@ -857,20 +1042,24 @@
 
 
     .footer {
-  margin-top: auto;
-  background-color: rgba(0, 0, 0, 0.204);
-  color: #000000;
-  text-align: center;
-  padding: 20px;
-}
+        margin-top: auto;
+        background-color: #8ecae6;
+        color: #000000;
+        text-align: center;
+        padding: 20px;
+        
+        }
 
-.footer-links a,
-.footer-social a {
-  margin: 0 15px;
-  color: #000000;
-  text-decoration: none;
-}
+        .footer-links a,
+        .footer-social a {
+        margin: 0 15px;
+        color: #000000;
+        text-decoration: none;
+        }
 
-.footer-social a i {
-  font-size: 1.2rem;
-}
+        .footer-social a i {
+        font-size: 1.2rem;
+        color: #000000;
+        transition: color 0.3s ease;
+        }
+        

@@ -797,6 +797,8 @@
             
         }
         .apply-btn::after{
+            content: '';
+            
 
         }
         .apply-btn:hover {

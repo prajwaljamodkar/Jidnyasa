@@ -59,12 +59,28 @@
         </svg>
         <div class="loader-text">Please Wait....</div>
     </div>
+    <video autoplay loop muted playsinline id="jidnyasaBoy">
+  <source src="src/child.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<style>
+  #jidnyasaBoy {
+    position: fixed;
+    bottom: 0;
+    right: -90px; /* change to 'right: 0' if you want it on the right */
+    width: 450px; /* adjust size as needed */
+    z-index: 1000;
+    pointer-events: none; /* ensures it doesn’t block clicks */
+  }
+</style>
+
     <div class="site-container" id="site-container">
         <div class="layout-container">
             <!-- Navigation -->
             <nav class="navbar">
                 <div class="nav-container">
-                    <a href="#home" class="logo">
+                    <a href="#" class="logo">
                         <div class="logo-icon"><img src="./src/logo/logo.png" ></div>
                         Jidnyasa Concept School
                     </a>

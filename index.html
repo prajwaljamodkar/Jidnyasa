@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -16,16 +16,7 @@
     <title>Jidnyasa Concept School</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="./css/styles.css">
-    <style>
-      #jidnyasaBoy {
-        position: fixed;
-        bottom: 0;
-        right: -90px; /* change to 'right: 0' if you want it on the right */
-        width: 450px; /* adjust size as needed */
-        z-index: 1000;
-        pointer-events: none; /* ensures it doesn’t block clicks */
-      }
-    </style>
+    
 </head>
 <body>
     <div class="background-container">
@@ -70,7 +61,16 @@
         <div class="loader-text">Please Wait....</div>
     </div>
 <video autoplay loop muted playsinline id="jidnyasaBoy">
-  <source src="src/child.mp4" type="video/mp4">
+  <source src="src/child1.mp4" type="video/mp4"><style>
+      #jidnyasaBoy {
+        position: fixed;
+        bottom: 0;
+        right: 0px; /* change to 'right: 0' if you want it on the right */
+        width: 130px; /* adjust size as needed */
+        z-index: 1000;
+        pointer-events: none; /* ensures it doesn’t block clicks */
+      }
+    </style>
   Your browser does not support the video tag.
 </video>
 

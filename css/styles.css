@@ -493,9 +493,39 @@
             font-optical-sizing: auto;
             font-style: normal;
         }
+        /* Jidnyasa Boy */
+        .bot-div {
+            position: fixed;
+            bottom: 0;   /* stays bottom */
+            right: 0;    /* stays right */
+            width: 130px;
+            z-index: 1000;
+            pointer-events: touch;
+        }
 
+        /* Bounce text on left-mid of bot */
+        .bounce-text {
+            position: absolute;
+            padding: 5px 10px;
+            top: 50%;       /* middle vertically on bot */
+            left: -80px;    /* push to left side of bot */
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000000;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            background:linear-gradient(90deg, #aee4f5 0%, #c7eacf);
+            animation: bounce 1s ease-in-out infinite;
+            white-space: nowrap;
+        }
 
-
+        /* Keep bounce effect horizontal */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(-50%) translateX(0); }
+            50% { transform: translateY(-50%) translateX(-8px); }
+}
 
         /* Section Styles */
         .section-title {

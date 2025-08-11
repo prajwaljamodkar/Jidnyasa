@@ -1,78 +1,220 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<title>Jidnyasa Concept School - Gallery</title>
+<link rel="icon" type="image/png" href="../src/logo/logo.png" />
+<link rel="stylesheet" href="../css/styles.css" />
+<link
+      rel="stylesheet"   
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
-    />
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Spline+Sans:wght@400;500;700">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+}
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+.lightbox.hidden { display: none; }
+.back-btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 8px 16px;
+  background: #fcf6bd;
+  border: #e4c1f9 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.back-btn:hover { background: #f7f1a4; }
+</style>
+</head>
+<body>
+<div class="background-container">
+  <div class="background-image"></div>
+  <div class="background-overlay"></div>
+</div>
 
-    <title>Gallery</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+<div class="site-container">
+  <div class="layout-container">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#0d141c] tracking-light text-[32px] font-bold leading-tight">Gallery</p>
-                <p class="text-[#49739c] text-sm font-normal leading-normal">
-                  Explore the vibrant life at Evergreen High through our photo gallery. Relive the excitement of our events and the everyday moments that make our school special.
-                </p>
-              </div>
-            </div>
-            <div class="pb-3">
-              <div class="flex border-b border-[#cedbe8] px-4 gap-8">
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#0c7ff2] text-[#0d141c] pb-[13px] pt-4" href="#">
-                  <p class="text-[#0d141c] text-sm font-bold leading-normal tracking-[0.015em]">Annual Day</p>
-                </a>
-                <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#49739c] pb-[13px] pt-4" href="#">
-                  <p class="text-[#49739c] text-sm font-bold leading-normal tracking-[0.015em]">Independence Day</p>
-                </a>
-              </div>
-            </div>
-            <hr>
-            <div class="flex flex-col items-center justify-center h-full">
-              <div class="gear animate-spin">⚙️</div>
-              <p class="message">this page is under maintenance.</p>
-          </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <div class="logo-icon"><img src="../src/logo/logo.png"></div>
+          Jidnyasa Concept School
+        </a>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="../index.html#classes" class="nav-link">Classes</a></li>
+          <li class="nav-item"><a href="../index.html#admissions" class="nav-link">Admissions</a></li>
+          <li class="nav-item"><a href="./gallery.html" class="nav-link active">Gallery</a></li>
+          <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
         </div>
       </div>
-    </div>
-    
-      <style>
-        .body {
-          font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
-          background-image: url(../src/doodle.png);
-        }
-        .p{align-items: center;}
-        text {
-          font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
-        }
+    </nav>
 
-    .gear {
-      font-size: 80px;
-      color: #555;
-      animation: spin 2s linear infinite;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+    <main class="main-content">
+      <div class="content-container">
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+        <!-- Categories -->
+        <section id="categoryView" class="fade show">
+          <h2 class="section-title">Gallery Categories</h2>
+        <div class="gallery-nav">
+            <button class="nav-btn-gallery active" data-category="all">All Photos</button>
+            <button class="nav-btn-gallery" data-category="classroom">Classroom</button>
+            <button class="nav-btn-gallery" data-category="playground">Playground</button>
+            <button class="nav-btn-gallery" data-category="events">Special Events</button>
+            <button class="nav-btn-gallery" data-category="crafts">Arts & Crafts</button>
+        </div>
+          <div class="gallery-grid">
+            <div class="gallery-item" style="background-image:url('../src/Gallery/hardsoft.jpg')" onclick="openCategory('independence')"></div>
+            <div class="gallery-item" style="background-image:url('../src/Gallery/roughsoft.jpg')" onclick="openCategory('annual')"></div>
+            <div class="gallery-item" style="background-image:url('../src/Gallery/Rocket.jpg')" onclick="openCategory('sports')"></div>
+            <div class="gallery-item" style="background-image:url('../src/Gallery/IMG_20240327_105601.jpg')" onclick="openCategory('science')"></div>
+            <div class="gallery-item" style="background-image:url('../src/Gallery/IMG_20240327_105723.jpg')" onclick="openCategory('cultural')"></div>
+            <div class="gallery-item" style="background-image:url('../src/Gallery/IMG_20240815_081840.jpg')" onclick="openCategory('others')"></div>
+          </div>
+        </section>
 
-    .message {
-      font-size: 24px;
-      font-weight: bold;
-      
-    }
-  </style>
-  </body>
+        <!-- Sub Gallery -->
+        <section id="subGalleryView" class="fade" style="display:none;">
+          <button class="back-btn" onclick="goBack()">← Back to Categories</button>
+          <div id="subGalleryTitle" class="section-title"></div>
+          <div id="subGalleryGrid" class="gallery-grid"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#why-jidnyasa">Why Jidnyasa?</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="../index.html#contact">Contact Us</a>
+      </div>
+      <p>© 2025 Jidnyasa Concept School. All rights reserved.</p>
+    </footer>
+
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden" onclick="closeLightbox()">
+  <img src="" alt="Preview" />
+</div>
+
+<script>
+const galleries = {
+  independence: {
+    title: "Independence Day",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+      "https://res.cloudinary.com/demo/image/upload/balloons.jpg"
+    ]
+  },
+  annual: {
+    title: "Annual Day",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/snow.jpg",
+      "https://res.cloudinary.com/demo/image/upload/surf.jpg"
+    ]
+  },
+  sports: {
+    title: "Sports Day",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/cup.jpg"
+    ]
+  },
+  science: {
+    title: "Science Fair",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/microscope.jpg"
+    ]
+  },
+  cultural: {
+    title: "Cultural Events",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/dance.jpg"
+    ]
+  },
+  others: {
+    title: "Other Activities",
+    images: [
+      "https://res.cloudinary.com/demo/image/upload/tree.jpg"
+    ]
+  }
+};
+
+function openCategory(key) {
+  const cat = galleries[key];
+  if (!cat) return;
+  document.getElementById("categoryView").classList.remove("show");
+  setTimeout(() => {
+    document.getElementById("categoryView").style.display = "none";
+    const grid = document.getElementById("subGalleryGrid");
+    grid.innerHTML = "";
+    cat.images.forEach(url => {
+      const div = document.createElement("div");
+      div.className = "gallery-item";
+      div.style.backgroundImage = `url('${url}')`;
+      div.onclick = () => openLightbox(url);
+      grid.appendChild(div);
+    });
+    document.getElementById("subGalleryTitle").textContent = cat.title;
+    document.getElementById("subGalleryView").style.display = "block";
+    setTimeout(() => document.getElementById("subGalleryView").classList.add("show"), 10);
+  }, 400);
+}
+
+function goBack() {
+  document.getElementById("subGalleryView").classList.remove("show");
+  setTimeout(() => {
+    document.getElementById("subGalleryView").style.display = "none";
+    document.getElementById("categoryView").style.display = "block";
+    setTimeout(() => document.getElementById("categoryView").classList.add("show"), 10);
+  }, 400);
+}
+
+function openLightbox(url) {
+  document.getElementById("lightbox").classList.remove("hidden");
+  document.querySelector("#lightbox img").src = url;
+}
+function closeLightbox() {
+  document.getElementById("lightbox").classList.add("hidden");
+}
+</script>
+</body>
 </html>

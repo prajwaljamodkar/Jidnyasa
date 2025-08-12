@@ -24,7 +24,7 @@
         <div class="background-overlay"></div>
     </div>
         <!-- Loader Screen -->
-    <!-- <div class="loader-container" id="loader">
+    <div class="loader-container" id="loader">
         <div class="background-image"></div>
         <div class="background-overlay"></div>
         <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="200px" viewBox="0 0 200 200" class="pencil">
@@ -59,14 +59,97 @@
             </g>
         </svg>
         <div class="loader-text">Please Wait....</div>
-    </div> -->
-    <a class="bot-div" href="#">
+    </div>
+<!-- Floating Bot -->
+    <div class="bot-container">
+    <a class="bot-div" id="botToggle" href="javascript:void(0);">
         <div class="bounce-text">Ask Bot!!</div>
         <video autoplay loop muted playsinline id="jidnyasaBoy">
-        <source src="src/child1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+            <source src="src/child1.mp4" type="video/mp4">
         </video>
     </a>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-header">
+        Jidnyasa — Assistant
+        <span id="closeChat">&times;</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+        <div class="msg bot">Hi! How can I help you today?</div>
+        </div>
+        <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type a message..." required>
+        <button type="button" id="sendBtn">Send</button>
+        </div>
+    </div>
+    </div>
+<script>
+  const botDiv = document.querySelector('.bot-div');
+  const chatPanel = document.getElementById('chatPanel');
+  const closeBtn = document.getElementById('closeChat');
+  const sendBtn = document.getElementById('sendBtn');
+  const chatInput = document.getElementById('userInput');
+  const chatMessages = document.getElementById('chatMessages');
+
+  // Toggle bot open
+  document.getElementById('botToggle').addEventListener('click', () => {
+    botDiv.style.display = 'none';
+    chatPanel.style.display = 'flex';
+  });
+
+  // Close bot
+  closeBtn.addEventListener('click', () => {
+    chatPanel.style.display = 'none';
+    botDiv.style.display = 'inline-block';
+  });
+
+  // Add message to chat window
+  function addMessage(text, type) {
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'msg ' + type;
+    msgDiv.textContent = text;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Send message to backend
+  async function sendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    chatInput.value = '';
+
+    try {
+      const res = await fetch('https://jidnyasa-bot-backend.vercel.app/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text })
+      });
+      const data = await res.json();
+      addMessage(data.reply || 'No reply', 'bot');
+    } catch (err) {
+      addMessage('Error: ' + err.message, 'bot');
+    }
+  }
+
+  // Handle Send button click
+  sendBtn.addEventListener('click', sendMessage);
+
+  // Handle Enter key
+  chatInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+</script>
+
+
+
+
+
     </div>
     <div class="site-container" id="site-container">
         <div class="layout-container">
@@ -468,12 +551,13 @@
         <h2 class="title" style="text-align: center; font-size: 1.5rem; margin-bottom: 1rem;">Find Us</h2>
             <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7464.101391997008!2d77.38330728899838!3d20.708165873448333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6cdf01cc7da19%3A0x88815213dfc808d0!2sHatgaon%2C%20Maharashtra%20444107!5e0!3m2!1sen!2sin!4v1749046816916!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.0130632170857!2d77.38715015632752!3d20.70810264679835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6d10049ab78f1%3A0xa8f442d3b6631b4d!2sJidnyasa%20Concept%20School!5e0!3m2!1sen!2sin!4v1754987815766!5m2!1sen!2sin"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+                <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     <script src="./js/script.js"></script>

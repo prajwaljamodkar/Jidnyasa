@@ -26,26 +26,26 @@ Hosted using **GitHub Pages** for cost-effective and high-availability deploymen
 
 ## 📂 Folder Structure
 
-Jidnyasa/
-│
-├── index.html # Landing page
-├── about.html # About school
-├── classes.html # Curriculum details
-├── admissions.html # Admissions process & requirements
-├── gallery.html # Events & photo gallery
-├── contact.html # Contact form & details
-│
-├── assets/
-│ ├── css/ # Stylesheets
-│ │ ├── style.css
-│ │ └── responsive.css
-│ ├── js/ # Scripts for interactivity
-│ │ └── main.js
-│ └── images/ # Static images/icons
-│
-├── chatbot/ # Chatbot UI & logic
-│
-└── README.md # Documentation
+Jidnyasa/<br>
+│<br>
+├── index.html # Landing page <br>
+├── about.html # About school<br>
+├── classes.html # Curriculum details<br>
+├── admissions.html # Admissions process & requirements<br>
+├── gallery.html # Events & photo gallery<br>
+├── contact.html # Contact form & details<br>
+│<br>
+├── assets/<br>
+│ ├── css/ # Stylesheets<br>
+│ │ ├── style.css<br>
+│ │ └── responsive.css<br>
+│ ├── js/ # Scripts for interactivity<br>
+│ │ └── main.js<br>
+│ └── images/ # Static images/icons<br>
+│<br>
+├── chatbot/ # Chatbot UI & logic<br>
+│<br>
+└── README.md # Documentation<br>
 
 ---
 
@@ -138,10 +138,4 @@ Push and Submit a Pull Request
 📜 License
 Licensed under the MIT License.
 Free to use, modify, and distribute with attribution.
-
-📧 Contact
-Jidnyasa Concept School
-📍 At.Post Hatgaon, Tq. Murtizapur, Dist. Akola (444107)
-📞 +91-7820878321 / +91-9096454753
-✉️ jidnyasamzr@gmail.com
 

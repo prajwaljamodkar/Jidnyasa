@@ -32,7 +32,7 @@ function showLoader() {
     mainContent.style.display = 'none';
     loader.style.display = 'flex';
     loader.classList.remove('fade-out');
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';ee
     document.documentElement.style.overflow = 'hidden';
     
     // Hide loader again after 3 seconds

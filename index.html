@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link rel="icon" type="image/png" href="./src/logo/logo.png">
     <link
       rel="stylesheet"   
@@ -64,7 +63,7 @@
     <div class="bot-container">
     <a class="bot-div" id="botToggle" href="javascript:void(0);">
         <div class="bounce-text">Ask Bot!!</div>
-        <video autoplay loop muted playsinline id="jidnyasaBoy">
+        <video autoplay loop muted playsinline preload="none" id="jidnyasaBoy">
             <source src="src/child1.mp4" type="video/mp4">
         </video>
     </a>
@@ -157,7 +156,7 @@
             <nav class="navbar">
                 <div class="nav-container">
                     <a href="#" class="logo">
-                        <div class="logo-icon"><img src="./src/logo/logo.png" ></div>
+                        <div class="logo-icon"><img src="./src/logo/logo.png" alt="Jidnyasa Logo"></div>
                         Jidnyasa Concept School
                     </a>
                     
@@ -557,7 +556,6 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     <script src="./js/script.js"></script>
@@ -578,12 +576,18 @@
   <p>© 2025 Jinyasa Concept School. All rights reserved.</p>
   <p>Developed by <a href="https://prajwal.engineer/">Prajwal Jamodkar</a> & <a href="https://sarthakmehare.vercel.app/">Sarthak Mehare</a></p>
   <script>
+  let footerScrollScheduled = false;
   window.addEventListener('scroll', () => {
-    const footer = document.querySelector('.footer');
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    if (window.scrollY >= scrollable - 10) {
-      footer.classList.add('visible');
-    }
+    if (footerScrollScheduled) return;
+    footerScrollScheduled = true;
+    requestAnimationFrame(() => {
+      const footer = document.querySelector('.footer');
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (window.scrollY >= scrollable - 10) {
+        footer.classList.add('visible');
+      }
+      footerScrollScheduled = false;
+    });
   });
 </script>
 </footer>
